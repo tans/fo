@@ -1,3 +1,3 @@
 git pull
 npm run build
-pm2 restart dd
+pm2 restart fo
