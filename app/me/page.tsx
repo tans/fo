@@ -4,7 +4,7 @@ export default function () {
   return (
     <>
       <div>
-        心经
+        <div></div>
         <Player></Player>
       </div>
     </>
