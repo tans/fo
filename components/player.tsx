@@ -203,40 +203,40 @@ export default function () {
 
   return (
     <>
-      <div className="p-2 my-2 border rounded-md">
-        <div className="mb-2">
-          {!playing && (
-            <Button
-              onClick={function () {
-                sound.play();
-                setPlaying(true);
-              }}
-            >
-              <Play className="w-4 h-4 mr-2" /> 播放
-            </Button>
-          )}
-          {playing && (
-            <Button
-              onClick={function () {
-                sound.pause();
-                setPlaying(false);
-              }}
-            >
-              <Pause className="w-4 h-4 mr-2" />
-              暂停
-            </Button>
-          )}
-        </div>
-        <div className="relative">
-          <div className="absolute top-20 w-full text-xl text-gray-500 font-black opacity-75 text-center">
+      <div className=" my-2 p-2">
+        <div className="relative ">
+          <div className="absolute top-20 w-full text-lg text-gray-900 font-black  text-center">
             <Lrc
               lrc={lrc}
               currentMillisecond={currentMillisecond}
               lineRenderer={lineRenderer}
             />
           </div>
-          <img src="/img/04.jpg" className="w-full rounded-md" />
+          <img src="/img/04.jpg" className="w-full rounded-md opacity-70" />
         </div>
+      </div>
+      <div className="mb-2 text-center">
+        {!playing && (
+          <Button
+            onClick={function () {
+              sound.play();
+              setPlaying(true);
+            }}
+          >
+            <Play className="w-4 h-4 mr-2" /> 播放
+          </Button>
+        )}
+        {playing && (
+          <Button
+            onClick={function () {
+              sound.pause();
+              setPlaying(false);
+            }}
+          >
+            <Pause className="w-4 h-4 mr-2" />
+            暂停
+          </Button>
+        )}
       </div>
     </>
   );
