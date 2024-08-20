@@ -15,6 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          src="https://umami.minapp.xin/script.js"
+          data-website-id="535f40ad-4bfb-4037-849c-aa661491cc7a"
+        ></script>
+      </head>
       <body>
         <div className="max-w-screen-sm mx-auto">{children}</div>
 
