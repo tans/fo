@@ -174,7 +174,7 @@ export default function () {
   let [sound, setSound] = useState("");
   let [playing, setPlaying] = useState(false);
   let [currentMillisecond, setCM] = useState(0);
-  useEffect(function () {
+  useEffect(() => {
     if (sound) {
       return;
     }
@@ -183,17 +183,27 @@ export default function () {
       loop: true,
       html5: true,
     });
+
     setSound(s);
+
+    let intervalId = setInterval(function () {
+      let d = s.seek();
+      setCM(d * 1000);
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
-  if (typeof window !== "undefined") {
-    setInterval(function () {
-      console.log("-");
-      if (sound) {
-        let d = sound.seek();
-        setCM(d * 1000);
-      }
-    }, 200);
-  }
+  // if (typeof window !== "undefined") {
+  //   setInterval(function () {
+  //     console.log("-");
+  //     if (sound) {
+  //       let d = sound.seek();
+  //       setCM(d * 1000);
+  //     }
+  //   }, 200);
+  // }
 
   function lineRenderer(props) {
     if (props.active) {
