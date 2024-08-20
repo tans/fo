@@ -4,8 +4,8 @@ import { Howl, Howler } from "howler";
 import { useEffect, useState } from "react";
 
 import { Lrc } from "react-lrc";
-import { Button } from "./ui/button";
 import { Pause, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 let lrc = `[00:00.550]《般若波罗蜜多心经》
 [00:15.550] 观自在菩萨

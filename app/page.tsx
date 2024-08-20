@@ -10,7 +10,7 @@ export default function Home() {
         般若田舍线上道场 - 一起念经,参禅,悟道。
       </div>
       <div className="text-center my-4">
-        <a href="/me" className="underline font-black">
+        <a href="/xinjing" className="underline font-black">
           《心经》
         </a>
       </div>
