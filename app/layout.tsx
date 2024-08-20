@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "般若田舍",
@@ -16,6 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="max-w-screen-sm mx-auto">{children}</div>
+
+        <Footer></Footer>
         <Toaster />
       </body>
     </html>
